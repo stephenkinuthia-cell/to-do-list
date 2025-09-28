@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Toodoo — Todo App</title>
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  
+  <link id="theme-link" rel="stylesheet" href="styles.css">
+
+  
+  <link rel="stylesheet" id="lighttheme" href="lightMode.css" disabled>
+
+  <meta name="description" content="Toodoo — Todo app clone">
+</head>
+<body class="dark">
+  <div class="app">
+    <header class="header container">
+      <h1 class="app-title">
+        TODO
+        <button id="theme-toggle">
+          <img id="theme-icon" src="images/icon-moon.svg" alt="Toggle theme">
+        </button>
+      </h1>
+
+    </header>
+
+    <main class="container">
+     
+      <section class="todo-input">
+       
+        <div class="input-wrapper">
+          <button class="input-checkbox" aria-hidden="true"></button>
+          <input id="todo-input" type="text" placeholder="Create a new todo..." autocomplete="off" />
+        </div>
+      </section>
+
+      <!-- List -->
+      <section class="todo-list-section">
+        <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
+
+        <!-- Footer inside list -->
+        <div class="todo-footer">
+          <span id="items-left" class="items-left">0 items left</span>
+
+          <div class="filters" role="tablist" aria-label="Filter todos">
+            <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="filter-btn" data-filter="active" role="tab" aria-selected="false">Active</button>
+            <button class="filter-btn" data-filter="completed" role="tab" aria-selected="false">Completed</button>
+          </div>
+
+          <button id="clear-completed" class="clear-completed" type="button">Clear Completed</button>
+        </div>
+      </section>
+
+      <p class="drag-hint">Drag and drop to reorder list</p>
+    </main>
+
+    <footer class="attribution container">Challenge by Frontend Mentor. Coded by Stephen.</footer>
+  </div>
+
+  
+  <template id="todo-template">
+    <li class="todo-item" draggable="true">
+      <button class="todo-checkbox" aria-label="Toggle complete" title="Mark complete"></button>
+      <span class="todo-text"></span>
+      <button class="todo-delete" aria-label="Delete todo" title="Delete"></button>
+    </li>
+  </template>
+
+  <script src="script.js" defer></script>
+
+  <!-- Confirmation Modal -->
+  <div id="confirm-modal" class="modal hidden">
+    <div class="modal-content">
+      <p id="confirm-message"></p>
+      <div class="modal-actions">
+        <button id="confirm-yes">Yes</button>
+        <button id="confirm-no">Cancel</button>
+      </div>
+    </div>
+</div>
+
+</body>
+</html>
