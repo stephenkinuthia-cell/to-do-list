@@ -1,5 +1,10 @@
 
-* { box-sizing:border-box; margin:0; padding:0; }
+* { 
+    box-sizing:border-box; 
+    margin:0; 
+    padding:0; 
+}
+
 :root{
   --bg-light: hsl(0,0%,98%);
   --panel-light: hsl(0,0%,98%);
@@ -28,9 +33,13 @@ body {
   body { background-image: url("images/bg-mobile-light.jpg"); }
 }
 
-.container { width:100%; max-width:550px; padding:2.5rem 1rem; }
+.container { 
+    width:100%; 
+    max-width:550px; 
+    padding:2.5rem 1rem; 
+}
 
-/* header */
+
 .header { 
     display:flex; 
     justify-content:space-between; 
@@ -49,7 +58,7 @@ body {
     color:inherit; 
 }
 
-/* input */
+
 .todo-input { 
     width:100%; 
     background:var(--panel-light); 
@@ -77,7 +86,7 @@ body {
     var(--muted-light); 
 }
 
-/* list */
+
 .todo-list { 
     width:100%; 
     background:var(--panel-light); 
@@ -97,7 +106,6 @@ body {
     border-bottom:none; 
 }
 
-/* checkbox */
 .todo-checkbox { 
     width:20px; 
     height:20px; 
@@ -117,7 +125,7 @@ body {
 }
 
 
-/* text */
+
 .todo-text { 
     flex:1; 
     color:var(--text-dark); 
@@ -129,7 +137,7 @@ body {
     color:var(--strike-light); 
 }
 
-/* delete */
+
 .todo-delete { 
     background:none; 
     border:0; 
@@ -146,7 +154,7 @@ body {
     color:var(--text-dark); 
 }
 
-/* footer inside */
+
 .todo-footer { 
     display:flex; 
     align-items:center; 
